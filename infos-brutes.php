@@ -3,6 +3,7 @@ require_once "Modele/header.php";
 require_once "Modele/footer.php";
 $header = new header();
 $footer = new footer();
+
 ?>
 
 <!doctype html>
