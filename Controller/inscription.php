@@ -1,11 +1,11 @@
 <?php
-require "Modele/header.php";
-require "Modele/footer.php";
-require "Modele/carousel.php";
-require "Modele/functions.php";
-require "Modele/getlinks.php";
+require "../Modele/header.php";
+require "../Modele/footer.php";
+require "../Modele/carousel.php";
 $carousel = new carousel();
 $functions = new functions();
+$header = new header();
+$footer = new footer();
 ?>
 <html lang="fr">
 <head>
@@ -13,25 +13,13 @@ $functions = new functions();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php $getlinks = new getlinks();
-    $getlinks->getlinks(); ?>
+
     <title>Les Fripouilles - Inscription</title>
 </head>
 <body>
-<?php
-$email = $_POST['email'];
-$mdp = $_POST['mdp'];
-$mdp_verif = $_POST['mdp_verif'];
-?>
-<?php
-if (isset($_COOKIE['connection'])) {
-    getheaderconn();
-} else {
-    getheader();
-}
-?>
 
-<form style='margin: 15px;' method='post' action="enregistrer-infos-enfant.php">
+<header><?php $header->getheader(); ?></header>
+<form style='margin: 15px;' method='post'>
     <div class='container' style="margin-bottom: 25px;">
         <div class='row mb-2'>
         </div>
@@ -88,7 +76,7 @@ if (isset($_POST['envoi'])) {
 }
 ?>
 <?php
-getfooter();
+$footer->getfooter();
 ?>
 </body>
 </html>

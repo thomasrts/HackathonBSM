@@ -59,7 +59,7 @@ class functions
         $mailer->CharSet = "UTF-8";
         $mailer->isHtml();
         $mailer->Username = "th.rotsaert@gmail.com";
-        $mailer->Password = "bx/)6,xDU]bh'5";
+        $mailer->Password = "";
         $mailer->Host = "smtp.gmail.com";
         $mailer->Port = 587;
         $mailer->SMTPSecure = 'tls';

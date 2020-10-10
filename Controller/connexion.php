@@ -40,6 +40,10 @@ $footer = new footer();
                 </div>
                 <button type="submit" name='envoi' style='border-top:25px' class="btn btn-primary">Valider</button>
             </div>
+            <div>
+
+
+            </div>
             <div class="col-md-5" style="margin-left: 20px;">
                 <h4>Pas encore inscrit au projet MOPODES ?</h4>
                 <a href="inscription.php" class="btn btn-primary" style="margin-top: 145px; margin-right:25px;">S'inscrire
@@ -49,6 +53,7 @@ $footer = new footer();
 
 </form>
 <footer>
+    <?php $footer->getfooter(); ?>
 </footer>
 </body>
 </html>
