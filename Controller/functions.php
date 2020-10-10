@@ -2,15 +2,11 @@
 
 class functions
 {
-    function setid($id)
-    {
-        $id_gen = $id;
-    }
 
     function verif_mdp($email)
     {
-        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "PPE3FRIPOUILLES");
-        $sql_verif = "";
+        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "hackathon");
+        $sql_verif = "SELECT md5_pass_user from users where login_user = '$email'";
         $envoi_query = mysqli_query($sql_connexion, $sql_verif);
         $donnees = mysqli_fetch_array($envoi_query);
         mysqli_close($sql_connexion);
@@ -20,8 +16,8 @@ class functions
 
     function verif_email($email)
     {
-        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "PPE3FRIPOUILLES");
-        $query_id = "";
+        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "hackathon");
+        $query_id = "SELECT login_user from users where login_user ='$email' ";
         $envoi_query = mysqli_query($sql_connexion, $query_id);
         $donnees = mysqli_fetch_array($envoi_query);
         mysqli_close($sql_connexion);
@@ -32,22 +28,23 @@ class functions
         }
     }
 
+    function insertuser($user, $pass)
+    {
+        $sql_connexion = mysqli_connect("51.83.42.191", "hackathon", "hackathon", "hackathon");
+        $mysql_query = "INSERT INTO users (login_user, md5_pass_user, nvau_type_acces) VALUES ('$user','$pass',1)";
+        $sql_connexion->query($mysql_query);
+        $sql_connexion->close();
+    }
+
     function getid($email)
     {
-        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "PPE3FRIPOUILLES");
-        $sql_verif = "";
+        $sql_connexion = mysqli_connect("51.83.42.191", "hackathon", "hackathon", "hackathon");
+        $sql_verif = "SELECT Id_user as ID FROM users WHERE login_user = '$email'";
         $envoi_query = mysqli_query($sql_connexion, $sql_verif);
         $donnees = mysqli_fetch_array($envoi_query);
         mysqli_close($sql_connexion);
         return $donnees["ID"];
 
-    }
-
-    function insertenfant($nom, $prenom)
-    {
-        $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "PPE3FRIPOUILLES");
-        $mysql_query = "";
-        $sql_connexion->query($mysql_query);
     }
 
     function envoyeremail($email)
@@ -59,7 +56,7 @@ class functions
         $mailer->CharSet = "UTF-8";
         $mailer->isHtml();
         $mailer->Username = "th.rotsaert@gmail.com";
-        $mailer->Password = "";
+        $mailer->Password = "braFek?0rub1";
         $mailer->Host = "smtp.gmail.com";
         $mailer->Port = 587;
         $mailer->SMTPSecure = 'tls';

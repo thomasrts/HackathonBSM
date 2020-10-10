@@ -18,7 +18,13 @@ $footer = new contenu();
 <header>
     <?php $contenu->getheader();?>
 </header>
-
+<h4>MOPODES - Mentions légales</h4>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 <footer>
     <?php $contenu->getfooter();?>
 </footer>

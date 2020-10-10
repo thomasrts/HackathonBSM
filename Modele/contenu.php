@@ -3,12 +3,14 @@
 
 class contenu
 {
-public static function getheader($linkimg){
+public static function getheader(){
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
-        <img src='<?php echo $linkimg ?>' width="8%" height="8%" style="margin-left: 25px;">
-        <a class="navbar-brand" href="../index.php" style="margin-left:20px;padding-left:25px; padding-right:25px; border-left:1px solid #333; border-right: 1px solid #333;">MOPODES</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="img/logo-nature-libre.png" width="8%" height="8%" style="margin-left: 25px;">
+        <a class="navbar-brand" href="index.php"
+           style="margin-left:20px;padding-left:25px; padding-right:25px; border-left:1px solid #333; border-right: 1px solid #333;">MOPODES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -19,23 +21,25 @@ public static function getheader($linkimg){
                 <li class="nav-item">
                     <div class="dropdown">
 
-                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
-                          Accès aux projets
-                     </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="https://ouranet.com">Bac a Marée</a>
-                      <a class="dropdown-item" href="https://ouranet.com">Nettoyage de plages</a>
-                      <a class="dropdown-item" href="https://ouranet.com">OSPAR</a>
-                      <a class="dropdown-item" href="https://ouranet.com">Plastic's origins</a>
-                       </div>
-                      </div>
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
+                            Accès aux actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Bac a Marée</a>
+                            <a class="dropdown-item" href="#">Nettoyage de plages</a>
+                            <a class="dropdown-item" href="#">OSPAR</a>
+                            <a class="dropdown-item" href="#">Plastic's origins</a>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php" style="margin:15px;">Qui sommes-nous</a>
                 </li>
-                <a href="../Controller/inscription.php" class="btn btn-primary" style="margin: 10px;" >S'inscrire à MOPODES</a>
-                <a href="../Controller/connexion.php" class="btn btn-primary" style="margin: 10px;">Se connecter à MOPODES</a>
             </ul>
+            <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
+            <a href="connexion.php" class="btn btn-primary" style="margin: 10px;">Connexion</a>
+
         </div>
     </nav>
     <?php
@@ -89,7 +93,7 @@ public static function getheader($linkimg){
                         </div>
                     </div>
                     <a href="#carouselExemple" class="carousel-control-prev" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="carousel-control-prev-icon" aria-hidden="ture"></span>
                         <span class="sr-only" style="color:#000000">Previous</span>
                     </a>
                     <a href="#carouselExemple" class="carousel-control-next" role="button" data-slide="next">
@@ -183,200 +187,20 @@ public static function getheader($linkimg){
 
     public function getGraphCirculaires()
     {
-        ?>
-        <div class="chart-container" style="margin-left: 50% height:600px; width:1200px">
-            <canvas id="myChart"  height="40vh" width="80vw"></canvas>
-        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
-
-       <?php
-             require_once "../Controller/RequetesSQL.php";
-
-        $bd = new RequetesSQL();
-        $bd->GetDonnees();
-        ?>
-    <script>
-        ctx = document.getElementById('myChart').getContext('2d');
-        chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'pie',
-
-            // The data for our dataset
-            data: {
-                labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
-                datasets: [{
-                    label: 'Dataset',
-                    backgroundColor: [
-                        'rgba(255, 37, 98, 0.8)',
-                        'rgba(39, 44, 232, 0.8)',
-                        'rgba(255, 118, 18, 0.8)',
-                        'rgba(255, 237, 45, 0.8)',
-                        'rgba(255, 10, 0, 0.8)',
-                        'rgb(117,185,255, 0.8)',
-                        'rgb(153,102,255, 0.8)',
-                        'rgb(83,184,70, 0.8)',
-                    ],
-                    borderWidth: 3,
-                    data: [
-
-                        <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
-
-                    ]
-                }]
-            },
-
-            // Configuration options go here
-            options: {
-                title: {
-                    display: true,
-                    text: 'Répartition des types de déchets en %',
-                    fontSize: 20
-                },
-                legend: {
-                    labels: {
-                        // This more specific font property overrides the global property
-                        fontSize: 30
-                    }
-                }
-
-            }
-        });
-    </script>
-    <?php
     }
 
     public function getGraphBatons()
     {
-        ?>
-        <div class="chart-container" style=" height:600px; width:1200px">
-            <canvas id="myChart" height="40vh" width="80vw"></canvas>
-        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
-
-        <?php require_once "../Controller/RequetesSQL.php";
-
-        $bd = new RequetesSQL();
-        $bd->GetDonnees();
-        ?>
-        <script>
-            ctx = document.getElementById('myChart').getContext('2d');
-            chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'bar',
-
-                // The data for our dataset
-                data: {
-                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
-                    datasets: [{
-                        label: 'Dataset',
-                        barPercentage: 0.5,
-                        minBarLength: 2,
-                        backgroundColor: [
-                            'rgba(255, 37, 98, 0.5)',
-                            'rgba(39, 44, 232, 0.5)',
-                            'rgba(255, 118, 18, 0.5)',
-                            'rgba(255, 237, 45, 0.5)',
-                            'rgba(255, 10, 0, 0.5)',
-                            'rgb(117,185,255, 0.5)',
-                            'rgb(153,102,255, 0.5)',
-                            'rgb(83,184,70, 0.5)',
-                        ],
-                        borderWidth: 3,
-                        data: [
-
-                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
-
-                        ]
-                    }]
-                },
-
-                // Configuration options go here
-                options: {
-                    title: {
-                        display: true,
-                        text: 'Répartition des types de déchets en %',
-                        fontSize: 20
-                    },
-                    legend: {
-                        display: false
-                    },
-                    tooltips: {
-                        callbacks: {
-                            label: function(tooltipItem) {
-                                return tooltipItem.yLabel;
-                            }
-                        }
-                    }
-
-                }
-            });
-        </script>
-        <?php
-    }
-
-    public function getGraphCourbes()
-    {
-        ?>
-        <div class="chart-container" style=" height:600px; width:1200px">
-            <canvas id="myChart" height="40vh" width="80vw"></canvas>
-        </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
-
-        <?php require_once "../Controller/RequetesSQL.php";
-
-        $bd = new RequetesSQL();
-        $bd->GetDonnees();
-        ?>
-        <script>
-            ctx = document.getElementById('myChart').getContext('2d');
-            chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'line',
-
-                // The data for our dataset
-                data: {
-                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
-                    datasets: [{
-                        label: 'Dataset',
-                        backgroundColor: [
-                            'rgba(255, 37, 98, 0.5)',
-                            'rgba(39, 44, 232, 0.5)',
-                            'rgba(255, 118, 18, 0.5)',
-                            'rgba(255, 237, 45, 0.5)',
-                            'rgba(255, 10, 0, 0.5)',
-                            'rgb(117,185,255, 0.5)',
-                            'rgb(153,102,255, 0.5)',
-                            'rgb(83,184,70, 0.5)',
-                        ],
-                        data: [
-
-                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
-
-                        ]
-                    }]
-                },
-
-                // Configuration options go here
-                options: {
-                    title: {
-                        display: true,
-                        text: 'Répartition des types de déchets en %',
-                        fontSize: 20
-                    },
-                    legend: {
-                        display: false
-                    }
-
-                }
-            });
-        </script>
-        <?php
     }
 
     public function getGraphCompartiments()
+    {
+
+    }
+
+    public function getGraphCourbes()
     {
 
     }
@@ -389,33 +213,5 @@ public static function getheader($linkimg){
     public function getGraphTableaus()
     {
 
-    }
-    public function getCardGraphCirculaire()
-    {
-        ?>
-        <div class="col-sm-9" style="margin-left: 200px; color:">
-            <div class="card">
-                <div class="col col-12 card card-body">
-                    <div style="margin-left: 100px">
-                        <?php $this->getGraphCirculaires(); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
-    }
-    public function getCardGraphBatons()
-    {
-        ?>
-        <div class="col-sm-9" style="margin-left: 200px; color:">
-            <div class="card">
-                <div class="col col-12 card card-body">
-                    <div style="margin-left: 100px">
-                        <?php $this->getGraphBatons(); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <?php
     }
 }
