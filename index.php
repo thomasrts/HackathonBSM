@@ -36,6 +36,7 @@ $card = new card();
     <?php
     $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","https://google.com");
     $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","https://google.com");
+    $card->card("img/Tableau.jpg","Tableau","Ceci est un tableau ","#")
     ?>
 </div>
 
