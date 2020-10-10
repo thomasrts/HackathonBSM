@@ -1,8 +1,6 @@
 <?php
-require_once "../Modele/header.php";
-require_once "../Modele/footer.php";
-$header = new header();
-$footer = new footer();
+require_once "../Modele/contenu.php";
+$contenu = new contenu();
 ?>
 
 <!doctype html>
@@ -13,7 +11,7 @@ $footer = new footer();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contenu.css">
     <link rel="stylesheet" href="../css/Chart.css">
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/Chart.bundle.js"></script>
@@ -21,7 +19,7 @@ $footer = new footer();
 </head>
 <body>
 <header>
-    <?php $header->getheader(); ?>
+    <?php $contenu->getheader(); ?>
 </header>
 <form style='margin: 15px;' method='post'>
     <div class='container'>
@@ -53,7 +51,7 @@ $footer = new footer();
 
 </form>
 <footer>
-    <?php $footer->getfooter(); ?>
+    <?php $contenu->getfooter(); ?>
 </footer>
 </body>
 </html>

@@ -7,7 +7,7 @@ class RequetesSQL
 
     public function Connectbdd()
     {
-        require_once 'login.php';
+        require_once 'Login.php';
         $login = new login();
         $this->sql_connexion = mysqli_connect($login->host,$login->user,$login->mdp,$login->bd);
         if ($this->sql_connexion->connect_error) die("Erreur Fatale Bilie...");

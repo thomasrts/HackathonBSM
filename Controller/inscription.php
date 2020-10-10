@@ -1,11 +1,6 @@
 <?php
-require "../Modele/header.php";
-require "../Modele/footer.php";
-require "../Modele/carousel.php";
-$carousel = new carousel();
-$functions = new functions();
-$header = new header();
-$footer = new footer();
+require "../Modele/contenu.php";
+$contenu = new contenu();
 ?>
 <html lang="fr">
 <head>
@@ -18,7 +13,7 @@ $footer = new footer();
 </head>
 <body>
 
-<header><?php $header->getheader(); ?></header>
+<header><?php $contenu->getheader(); ?></header>
 <form style='margin: 15px;' method='post'>
     <div class='container' style="margin-bottom: 25px;">
         <div class='row mb-2'>
@@ -76,7 +71,7 @@ if (isset($_POST['envoi'])) {
 }
 ?>
 <?php
-$footer->getfooter();
+$contenu->getfooter();
 ?>
 </body>
 </html>
