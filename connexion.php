@@ -1,5 +1,5 @@
 <?php
-require_once "../Modele/contenu.php";
+require_once "Modele/contenu.php";
 $contenu = new contenu();
 ?>
 
@@ -22,11 +22,9 @@ $contenu = new contenu();
     <?php $contenu->getheader(); ?>
 </header>
 <?php
-
 $email = $_POST['email'];
 $mdp = $_POST['mdp'];
 $md5mdp = md5($mdp);
-
 ?>
 <form style='margin: 15px;' method='post' action="Controller/verif_mdp.php">
     <div class='container'>

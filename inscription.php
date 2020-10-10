@@ -1,5 +1,5 @@
 <?php
-require "../Modele/contenu.php";
+require_once "Modele/contenu.php";
 require "Controller/functions.php";
 $contenu = new contenu();
 $functions = new functions();
@@ -10,7 +10,12 @@ $functions = new functions();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/contenu.css">
+    <link rel="stylesheet" href="css/Chart.css">
 
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/Chart.bundle.js"></script>
     <title>MOPODES - Inscription</title>
 </head>
 <body>
