@@ -26,7 +26,7 @@ $contenu = new contenu();
 </header>
 <body>
 
-<?php $contenu->getGraphCourbes(); ?>
+<?php $contenu->getCardGraphCourbes(); ?>
 
 </body>
 <footer>

@@ -426,4 +426,18 @@ public static function getheader($linkImg){
         </div>
         <?php
     }
+    public function getCardGraphCourbes()
+    {
+        ?>
+        <div class="col-sm-9" style="margin-left: 200px; color:">
+            <div class="card">
+                <div class="col col-12 card card-body">
+                    <div style="margin-left: 100px">
+                        <?php $this->getGraphCourbes(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
 }
