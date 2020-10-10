@@ -1,32 +1,28 @@
-<!doctype html>
-<html lang=fr>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-<p>start</p>
-
 <div class="chart-container" style="position: relative; height:40vh; width:80vw">
     <canvas id="myChart" height="40vh" width="80vw"></canvas>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-<?php require_once "../afficher.php";
 
+
+
+<?php require_once "../Modele/afficher.php";
+
+echo '<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>';
 $bd = new afficher();
 $bd->EchoLesDonnees();
+
+
+
 
 ?>
 
 <script>
-    ctx = document.getElementById('myChart').getContext('2d');
-    chart = new Chart(ctx, {
+
+
+
+     ctx = document.getElementById('myChart').getContext('2d');
+     chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'pie',
 
@@ -71,9 +67,3 @@ $bd->EchoLesDonnees();
         }
     });
 </script>
-
-<p>Stop</p>
-
-</body>
-</html>
-
