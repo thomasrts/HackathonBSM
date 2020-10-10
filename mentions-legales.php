@@ -1,8 +1,7 @@
 <?php
-require_once "Modele/header.php";
-require_once "Modele/footer.php";
-$header = new header();
-$footer = new footer();
+require_once "Modele/contenu.php";
+$contenu = new contenu();
+$footer = new contenu();
 
 ?>
 
@@ -16,8 +15,12 @@ $footer = new footer();
     <title>MOPODES - Mentions Légales</title>
 </head>
 <body>
-<header><?php $header->getheader();?></header>
+<header>
+    <?php $contenu->getheader();?>
+</header>
 
-<footer><?php $footer->getfooter();?></footer>
+<footer>
+    <?php $contenu->getfooter();?>
+</footer>
 </body>
 </html>
