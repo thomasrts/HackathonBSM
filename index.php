@@ -55,7 +55,7 @@ $caroussel = new carousel();
     </div>
 </div>
 
-<?php $caroussel->carousel();?>
+<?php $caroussel->carrousel("img/Courbes.jpg", "img/Diagramme circulaire.jpg", "img/Diagramme en batons.jpg");?>
 
 <footer><?php $footer->getfooter();?></footer>
 
