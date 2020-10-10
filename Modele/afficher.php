@@ -14,7 +14,7 @@ class afficher
     public $nbDiversPourcent = 0;
 
 
-    public function EchoLesDonnees()
+    public function getDonnees()
     {
         require_once "../Controller/RequetesSQL.php";
 

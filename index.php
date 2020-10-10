@@ -22,7 +22,7 @@ $contenu = new contenu();
 </head>
 <body>
 <header>
-    <?php $contenu->getheader()?>
+    <?php $contenu->getheader("./img/logo-nature-libre.png")?>
 </header>
 
 <div class="container-sm">
@@ -43,8 +43,8 @@ $contenu = new contenu();
 <div class="row" style="margin-left:250px;">
     <?php
     $contenu->getCard("img/Courbes.jpg","Courbes","Ce sont des courbes","/Modele/Graphiques/courbes.php");
-    $contenu->getCard("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","/Modele/Graphiques/circulaires.php");
-    $contenu->getCard("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","/Modele/Graphiques/batons.php");
+    $contenu->getCard("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","./Modele/circulaires.php");
+    $contenu->getCard("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","./Modele/batons.php");
     ?>
 </div>
 <div class="row" style="margin-left:250px;">
