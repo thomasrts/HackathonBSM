@@ -2,6 +2,8 @@
 require_once "Modele/header.php";
 require_once "Modele/footer.php";
 require_once "Modele/carousel.php";
+require_once "Modele/card.php";
+$card = new card();
 $header = new header();
 $footer = new footer();
 $caroussel = new carousel();
@@ -24,21 +26,20 @@ $caroussel = new carousel();
 <body>
 <header><?php $header->getheader()?></header>
 <?php
-require_once "Modele/card.php";
-$card = new card();
+
 ?>
 <div class="row" style="margin-left:250px;">
     <?php
-    $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","https://ouranet.com");
-    $card->card("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","https://ouranet.com");
-    $card->card("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","https://ouranet.com");
+    $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","/Modele/Graphiques/courbes.php");
+    $card->card("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","/Modele/Graphiques/circulaires.php");
+    $card->card("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","/Modele/Graphiques/batons.php");
     ?>
 </div>
 <div class="row" style="margin-left:250px;">
     <?php
-    $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","https://ouranet.com");
-    $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","https://ouranet.com");
-    $card->card("img/Tableau.jpg","Tableau","Ceci est un tableau ","https://ouranet.com")
+    $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","/Modele/Graphiques/nuage.php");
+    $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","/Modele/Graphiques/compartiments.php");
+    $card->card("img/Tableau.jpg","Tableau","Ceci est un tableau ","/Modele/Graphiques/tableau.php")
     ?>
 </div>
 
