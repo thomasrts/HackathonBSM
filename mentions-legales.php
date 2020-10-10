@@ -1,3 +1,11 @@
+<?php
+require_once "Modele/header.php";
+require_once "Modele/footer.php";
+$header = new header();
+$footer = new footer();
+
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -8,6 +16,8 @@
     <title>MOPODES - Mentions Légales</title>
 </head>
 <body>
+<header><?php $header->getheader();?></header>
 
+<footer><?php $footer->getfooter();?></footer>
 </body>
 </html>
