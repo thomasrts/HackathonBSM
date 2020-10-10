@@ -3,10 +3,10 @@
 
 class contenu
 {
-public static function getheader(){
+public static function getheader($linkImg){
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
-        <img src="img/logo-nature-libre.png" width="8%" height="8%" style="margin-left: 25px;">
+        <img src='<?php echo $linkImg ?>' width="8%" height="8%" style="margin-left: 25px;">
         <a class="navbar-brand" href="index.php"
            style="margin-left:20px;padding-left:25px; padding-right:25px; border-left:1px solid #333; border-right: 1px solid #333;">MOPODES</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -187,20 +187,204 @@ public static function getheader(){
 
     public function getGraphCirculaires()
     {
+        ?>
+        <div class="chart-container" style="margin-left: 50% height:600px; width:1200px">
+            <canvas id="myChart"  height="40vh" width="80vw"></canvas>
+        </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <?php
+        require_once "../Controller/RequetesSQL.php";
+
+        $bd = new RequetesSQL();
+        $bd->GetDonnees();
+        ?>
+        <script>
+            ctx = document.getElementById('myChart').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'pie',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
+                    datasets: [{
+                        label: 'Dataset',
+                        backgroundColor: [
+                            'rgba(255, 37, 98, 0.8)',
+                            'rgba(39, 44, 232, 0.8)',
+                            'rgba(255, 118, 18, 0.8)',
+                            'rgba(255, 237, 45, 0.8)',
+                            'rgba(255, 10, 0, 0.8)',
+                            'rgb(117,185,255, 0.8)',
+                            'rgb(153,102,255, 0.8)',
+                            'rgb(83,184,70, 0.8)',
+                        ],
+                        borderWidth: 3,
+                        data: [
+
+                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
+
+                        ]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des types de déchets en %',
+                        fontSize: 20
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontSize: 30
+                        }
+                    }
+
+                }
+            });
+        </script>
+        <?php
     }
 
     public function getGraphBatons()
     {
+        ?>
+        <div class="chart-container" style=" height:600px; width:1200px">
+            <canvas id="myChart" height="40vh" width="80vw"></canvas>
+        </div>
 
-    }
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-    public function getGraphCompartiments()
-    {
+        <?php require_once "../Controller/RequetesSQL.php";
 
+        $bd = new RequetesSQL();
+        $bd->GetDonnees();
+        ?>
+        <script>
+            ctx = document.getElementById('myChart').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
+                    datasets: [{
+                        label: 'Dataset',
+                        barPercentage: 0.5,
+                        minBarLength: 2,
+                        backgroundColor: [
+                            'rgba(255, 37, 98, 0.5)',
+                            'rgba(39, 44, 232, 0.5)',
+                            'rgba(255, 118, 18, 0.5)',
+                            'rgba(255, 237, 45, 0.5)',
+                            'rgba(255, 10, 0, 0.5)',
+                            'rgb(117,185,255, 0.5)',
+                            'rgb(153,102,255, 0.5)',
+                            'rgb(83,184,70, 0.5)',
+                        ],
+                        borderWidth: 3,
+                        data: [
+
+                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
+
+                        ]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des types de déchets en %',
+                        fontSize: 20
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltips: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.yLabel;
+                            }
+                        }
+                    }
+
+                }
+            });
+        </script>
+        <?php
     }
 
     public function getGraphCourbes()
+    {
+        ?>
+        <div class="chart-container" style=" height:600px; width:1200px">
+            <canvas id="myChart" height="40vh" width="80vw"></canvas>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <?php require_once "../Controller/RequetesSQL.php";
+
+        $bd = new RequetesSQL();
+        $bd->GetDonnees();
+        ?>
+        <script>
+            ctx = document.getElementById('myChart').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
+                    datasets: [{
+                        label: 'Dataset',
+                        backgroundColor: [
+                            'rgba(255, 37, 98, 0.5)',
+                            'rgba(39, 44, 232, 0.5)',
+                            'rgba(255, 118, 18, 0.5)',
+                            'rgba(255, 237, 45, 0.5)',
+                            'rgba(255, 10, 0, 0.5)',
+                            'rgba(117,185,255, 0.5)',
+                            'rgba(153,102,255, 0.5)',
+                            'rgba(83,184,70, 0.5)',
+                        ],
+                        borderColor:[
+                          'rgba(96,96,96,0.8)'
+                        ],
+                        fill: false,
+                        data: [
+
+                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
+
+                        ]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des types de déchets en %',
+                        fontSize: 20
+                    },
+                    legend: {
+                        display: false
+                    }
+
+                }
+            });
+        </script>
+        <?php
+    }
+
+    public function getGraphCompartiments()
     {
 
     }
@@ -213,5 +397,33 @@ public static function getheader(){
     public function getGraphTableaus()
     {
 
+    }
+    public function getCardGraphCirculaire()
+    {
+        ?>
+        <div class="col-sm-9" style="margin-left: 200px; color:">
+            <div class="card">
+                <div class="col col-12 card card-body">
+                    <div style="margin-left: 100px">
+                        <?php $this->getGraphCirculaires(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    public function getCardGraphBatons()
+    {
+        ?>
+        <div class="col-sm-9" style="margin-left: 200px; color:">
+            <div class="card">
+                <div class="col col-12 card card-body">
+                    <div style="margin-left: 100px">
+                        <?php $this->getGraphBatons(); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
     }
 }
