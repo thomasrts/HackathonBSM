@@ -27,18 +27,14 @@ public static function getheader(){
                       <a class="dropdown-item" href="https://ouranet.com">Nettoyage de plages</a>
                       <a class="dropdown-item" href="https://ouranet.com">OSPAR</a>
                       <a class="dropdown-item" href="https://ouranet.com">Plastic's origins</a>
-                      <a class="dropdown-item" href="https://ouranet.com">MOPODES</a>
                        </div>
                       </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php" style="margin:15px;">Qui sommes-nous</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../edt.php" style="margin:15px;">Activités de la semaine</a>
-                </li>
-                <a href="Controller/inscription.php" class="btn btn-primary" style="margin: 10px; " >S'inscrire à MOPODES</a>
-                <a href="Controller/connexion.php" class="btn btn-primary" style="margin: 10px; margin-right:25px;">Se connecter à MOPODES</a>
+                <a href="../Controller/inscription.php" class="btn btn-primary" style="margin: 10px;" >S'inscrire à MOPODES</a>
+                <a href="../Controller/connexion.php" class="btn btn-primary" style="margin: 10px;">Se connecter à MOPODES</a>
             </ul>
         </div>
     </nav>
