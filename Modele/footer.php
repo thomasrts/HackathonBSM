@@ -17,7 +17,7 @@ public static function getfooter(){
                 <h6>Accès rapide</h6>
                 <ul class="footer-links">
                     <li><a href="../connexion.php">Se connecter a son espace personnel</a></li>
-                    <li><a href="../inscription.php">S'inscrire aux Fripouilles</a></li>
+                    <li><a href="../inscription.php"></a></li>
                     <li><a href="#">Accéder au calendrier des activités</a></li>
                     <li><a href="../nos-services.php">Nos services administratifs</a></li>
                 </ul>
