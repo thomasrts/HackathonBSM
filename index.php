@@ -19,28 +19,25 @@ $caroussel = new carousel();
     <script src="js/bootstrap.bundle.js"></script>
     <title>MOPODES</title>
 </head>
-
+<body>
 <header><?php $header->getheader()?></header>
 <?php
 require_once "Modele/card.php";
 $card = new card();
 ?>
-<div class="row">
+<div class="row container">
     <?php
     $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","https://google.com");
     $card->card("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","https://google.com");
     $card->card("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","https://google.com");
     ?>
 </div>
-<div class="row">
+<div class="row container">
     <?php
     $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","https://google.com");
     $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","https://google.com");
     ?>
 </div>
-
-
-<?php $caroussel->carrousel("img/Courbes.jpg", "img/Diagramme circulaire.jpg", "img/Diagramme en batons.jpg");?>
 
 <footer><?php $footer->getfooter();?></footer>
 

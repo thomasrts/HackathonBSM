@@ -14,10 +14,21 @@ public static function getheader(){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link active" href="../index.php" style="margin:15px;">Accueil </a>
+                    <a class="nav-link active" href="../index.php" style="margin:15px;">Données en brut </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php" style="margin:15px;">Nos services </a>
+                    <div class="dropdown">
+                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
+                          Accès au graphiques
+                     </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Courbes</a>
+                      <a class="dropdown-item" href="#">Circulaires</a>
+                      <a class="dropdown-item" href="#">Batons</a>
+                      <a class="dropdown-item" href="#">Nuage</a>
+                      <a class="dropdown-item" href="#">Compartimentable</a>
+                       </div>
+                      </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php" style="margin:15px;">Qui sommes-nous</a>

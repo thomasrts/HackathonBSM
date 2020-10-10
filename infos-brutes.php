@@ -1,11 +1,3 @@
-<?php
-require_once "Modele/header.php";
-require_once "Modele/footer.php";
-require_once "Modele/carousel.php";
-$header = new header();
-$footer = new footer();
-$caroussel = new carousel();
-?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -19,10 +11,6 @@ $caroussel = new carousel();
     <title>Document</title>
 </head>
 <body>
-<header><?php $header->getheader()?></header>
 
-<?php $caroussel->carousel();?>
-
-<footer><?php $footer->getfooter();?></footer>
 </body>
 </html>

@@ -18,7 +18,7 @@ protected $link;
     public function card($image,$nom,$desc,$link){
         ?>
             <div class="col-sm-4">
-        <div class="card">
+              <div class="card">
             <div class="col col-12 card card-body">
                 <img class="card-img img-graph" src="<?php echo $image?>">
                 <h2 class="card-title"><?php  echo $nom?></h2>
@@ -28,6 +28,7 @@ protected $link;
         </div>
     </div>
         <?php
+        return $this;
     }
 
     /**
