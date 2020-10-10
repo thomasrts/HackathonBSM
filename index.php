@@ -28,7 +28,57 @@ $caroussel = new carousel();
 <div class="container-sm">
     <h4>Bienvenue dans l'accueil du projet MOPODES</h4>
     <hr>
+    <div>
+        <h5 style="margin-bottom: 20px;">Accéder aux différents projets : </h5>
+
+    </div>
+
 </div>
+
+<div class="container-sm">
+    <div class="row">
+        <div class="card" style="width: 30rem;">
+            <img src="..." class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Bac à marée</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+            <img src="..." class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Nettoyage de plages</h5>
+                <p class="card-text">Journée de sensibilisation lors du nettoyage des plages polluées par les
+                    déchets</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card" style="width: 30rem;">
+            <img src="..." class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">OSPAR</h5>
+                <p class="card-text">Protection du milieu de mar</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+            <img src="..." class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Plastic's origins</h5>
+                <p class="card-text">Dictionnaire de données ou tableau double entree avec outil de recherche assez
+                    poussé pour ressortir les études sur une période ou sur un type donné</p>
+                <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
 <div class="row" style="margin-left:250px;">
     <?php
     $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","/Modele/Graphiques/courbes.php");
