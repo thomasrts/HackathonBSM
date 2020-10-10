@@ -1,6 +1,8 @@
 <?php
 require "../Modele/contenu.php";
+require "Controller/functions.php";
 $contenu = new contenu();
+$functions = new functions();
 ?>
 <html lang="fr">
 <head>
@@ -12,13 +14,17 @@ $contenu = new contenu();
     <title>Les Fripouilles - Inscription</title>
 </head>
 <body>
-
+<?php
+$email = $_POST['email'];
+$mdp = $_POST['mdp'];
+$mdp_verif = $_POST['mdp_verif'];
+?>
 <header><?php $contenu->getheader(); ?></header>
 <form style='margin: 15px;' method='post'>
     <div class='container' style="margin-bottom: 25px;">
         <div class='row mb-2'>
         </div>
-        <h2>S'inscrire au relais Les Fripouilles</h2>
+        <h2>S'inscrire au projet MOPODES</h2>
         <div class="form-group">
             <label style='width: 150px'>Email : <br/><input id="$nom" type='text' required
                                                             placeholder="example@gmail.com" name='email'></label>
@@ -51,17 +57,8 @@ if (isset($_POST['envoi'])) {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 try {
                     $md5mdp = md5($mdp);
+                    $functions->insertuser($email, $md5mdp);
 
-                    $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "PPE3FRIPOUILLES");
-                    $mysql_query = "INSERT INTO login_parent (email_parent,md5_pass_parent) VALUES ('$email','$md5mdp')";
-                    if (!($res = $sql_connexion->query($mysql_query))) {
-                        printf("[%d] %s\n", $sql_connexion->errno, $sql_connexion->error);
-                    } else {
-                        $functions->envoyeremail($email);
-                        sleep(1);
-                        echo "<br>Votre inscription au relais d'assistances maternelles a bien été prise en compte";
-                    }
-                    $sql_connexion->close();
                 } catch (mysqli_sql_exception $exception) {
                     echo "$exception";
                 }
