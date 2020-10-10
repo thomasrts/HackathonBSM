@@ -29,6 +29,14 @@ $contenu = new contenu();
     <h4>Bienvenue dans l'accueil du projet MOPODES</h4>
     <hr>
 </div>
+
+
+<?php
+    $contenu->getCardPresentation("img/bacamare.jpg","img/netoyagedeplages.jpg","img/ospar.jpg","img/plasticsorigins.jpg","Bac à marée","Nettoyage de plages","OSPAR","Plastics's origins","oui","Journée de sensibilisation lors du nettoyage des plages polluées par les déchets","Protection du milieu","Dictionnaire de données ou tableau double entrée avec outil de recherche assez poussé pour ressortir les études sur une période ou sur un type donné");
+?>
+
+
+
 <div class="row" style="margin-left:250px;">
     <?php
     $contenu->getCard("img/Courbes.jpg","Courbes","Ce sont des courbes","/Modele/Graphiques/courbes.php");

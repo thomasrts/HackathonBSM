@@ -134,6 +134,51 @@ public static function getheader(){
         <?php
     }
 
+    public function getCardPresentation($img1, $img2, $img3, $img4, $titre1,$titre2,$titre3,$titre4,$desc1,$desc2,$desc3,$desc4)
+    {
+        ?>
+        <div class="container-sm">
+            <div class="row">
+                <div class="card" style="width: 30rem; margin-right:7%; margin-left:5%">
+                    <img src="<?php echo $img1 ?>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $titre1?></h5>
+                        <p class="card-text"><?php echo $desc1?></p>
+                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 30rem;margin-right:7%;margin-left:5%">
+                    <img src="<?php echo $img2 ?>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $titre2?></h5>
+                        <p class="card-text"><?php echo $desc2?></p>
+                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card" style="width: 30rem;margin-right:7%;margin-left:5%">
+                    <img src="<?php echo $img3 ?>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $titre3?></h5>
+                        <p class="card-text"><?php echo $desc3?></p>
+                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 30rem;margin-right:7%;margin-left:5%">
+                    <img src="<?php echo $img4 ?>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $titre4?></h5>
+                        <p class="card-text"><?php echo $desc4?></p>
+                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <?php
+    }
+
     public function getGraphCirculaires()
     {
 
