@@ -17,9 +17,43 @@ $footer = new footer();
     <script src="js/bootstrap.bundle.js"></script>
     <title>MOPODES</title>
 </head>
-<body>
+
 <header><?php $header->getheader()?></header>
 
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="col col-12  card card-body">
+                <img class="card-img img-graph" src="img/Courbes.jpg">
+                <h2 class="card-title ">Courbes</h2>
+                <p class="card-text">Ce sont des courbes</p>
+                <a href="#" class="btn btn-primary">Plus d'informations</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+         <div class="col col-12 card card-body">
+            <img class="card-img img-graph" src="img/Diagramme%20circulaire.jpg">
+            <h2 class="card-title">Diagrammme circulaire</h2>
+            <p class="card-text">C'est un diag circulaire</p>
+            <a href="#" class="btn btn-primary">Plus d'informations</a>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="col col-12 card card-body">
+                <img class="card-img img-graph" src="img/Diagramme%20en%20batons.jpg">
+                <h2 class="card-title">Diagrammme batons</h2>
+                <p class="card-text">C'est un diag en baton</p>
+                <a href="#" class="btn btn-primary">Plus d'informations</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <footer><?php $footer->getfooter();?></footer>
+
 </body>
 </html>
