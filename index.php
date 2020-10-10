@@ -25,14 +25,14 @@ $caroussel = new carousel();
 require_once "Modele/card.php";
 $card = new card();
 ?>
-<div class="row container">
+<div class="row">
     <?php
     $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","https://google.com");
     $card->card("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","https://google.com");
     $card->card("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","https://google.com");
     ?>
 </div>
-<div class="row container">
+<div class="row">
     <?php
     $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","https://google.com");
     $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","https://google.com");

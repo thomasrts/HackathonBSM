@@ -1,3 +1,10 @@
+<?php
+require_once "Modele/header.php";
+require_once "Modele/footer.php";
+$header = new header();
+$footer = new footer();
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -11,6 +18,6 @@
     <title>Document</title>
 </head>
 <body>
-
+<?php ?>
 </body>
 </html>
