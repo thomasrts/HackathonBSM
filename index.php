@@ -25,9 +25,10 @@ $caroussel = new carousel();
 </head>
 <body>
 <header><?php $header->getheader()?></header>
-<?php
-
-?>
+<div class="container-sm">
+    <h4>Bienvenue dans l'accueil du projet MOPODES</h4>
+    <hr>
+</div>
 <div class="row" style="margin-left:250px;">
     <?php
     $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","/Modele/Graphiques/courbes.php");
@@ -38,8 +39,8 @@ $caroussel = new carousel();
 <div class="row" style="margin-left:250px;">
     <?php
     $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","/Modele/Graphiques/nuage.php");
-    $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","/Modele/Graphiques/compartiments.php");
-    $card->card("img/Tableau.jpg","Tableau","Ceci est un tableau ","/Modele/Graphiques/tableau.php")
+    $card->card("img/Graphique%20compartimentable.jpg", "Graphique compartimentable", "GRAPH ME PARLE PAS BENJAMIN ALED", "/Modele/Graphiques/compartiments.php");
+    $card->card("img/Tableau.jpg", "Tableau", "Ceci est un tableau ", "/Modele/Graphiques/tableau.php");
     ?>
 </div>
 

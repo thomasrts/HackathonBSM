@@ -18,15 +18,16 @@ public static function getheader(){
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
+                    
                      <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
-                          Accès au graphiques
+                          Accès aux projets
                      </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Courbes</a>
-                      <a class="dropdown-item" href="#">Circulaires</a>
-                      <a class="dropdown-item" href="#">Batons</a>
-                      <a class="dropdown-item" href="#">Nuage</a>
-                      <a class="dropdown-item" href="#">Compartimentable</a>
+                      <a class="dropdown-item" href="https://ouranet.com">Bac a Marée</a>
+                      <a class="dropdown-item" href="https://ouranet.com">Nettoyage de plages</a>
+                      <a class="dropdown-item" href="https://ouranet.com">OSPAR</a>
+                      <a class="dropdown-item" href="https://ouranet.com">Plastic's origins</a>
+                      <a class="dropdown-item" href="https://ouranet.com">MOPODES</a>
                        </div>
                       </div>
                 </li>
@@ -36,6 +37,8 @@ public static function getheader(){
                 <li class="nav-item">
                     <a class="nav-link" href="../edt.php" style="margin:15px;">Activités de la semaine</a>
                 </li>
+                <a href="Controller/inscription.php" class="btn btn-primary" style="margin: 10px; " >S'inscrire au RAM</a>
+                <a href="Controller/connexion.php" class="btn btn-primary" style="margin: 10px; margin-right:25px;">Se connecter au RAM</a>
             </ul>
         </div>
     </nav>
