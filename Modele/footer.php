@@ -14,7 +14,7 @@ public static function getfooter(){
                 <p class="text-justify">MOPODES</i></p>
             </div>
             <div class="col-xs-6 col-md-3">
-                <h6>Accès rapide </h6>
+                <h6>Accès rapide</h6>
                 <ul class="footer-links">
                     <li><a href="../connexion.php">Se connecter a son espace personnel</a></li>
                     <li><a href="../inscription.php">S'inscrire aux Fripouilles</a></li>

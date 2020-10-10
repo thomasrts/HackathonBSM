@@ -1,8 +1,10 @@
 <?php
 require_once "Modele/header.php";
 require_once "Modele/footer.php";
+require_once "Modele/carousel.php";
 $header = new header();
 $footer = new footer();
+$caroussel = new carousel();
 ?>
 
 <!doctype html>
@@ -52,6 +54,8 @@ $footer = new footer();
         </div>
     </div>
 </div>
+
+<?php $caroussel->carousel();?>
 
 <footer><?php $footer->getfooter();?></footer>
 
