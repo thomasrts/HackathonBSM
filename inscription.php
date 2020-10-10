@@ -11,7 +11,7 @@ $functions = new functions();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Les Fripouilles - Inscription</title>
+    <title>MOPODES - Inscription</title>
 </head>
 <body>
 <?php
@@ -58,7 +58,8 @@ if (isset($_POST['envoi'])) {
                 try {
                     $md5mdp = md5($mdp);
                     $functions->insertuser($email, $md5mdp);
-
+                    $functions->envoyeremail($email);
+                    echo "<h4>Un mail de bienvenue vous a été envoyé à l'adresse e-mail renseignée ci-dessus</h4>";
                 } catch (mysqli_sql_exception $exception) {
                     echo "$exception";
                 }
