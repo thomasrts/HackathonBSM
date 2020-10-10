@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="OVH" uuid="63db8acb-beaf-4c08-a524-34b8d8eddbaa">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://51.83.42.191:3306/hackathon</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="gmt" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
