@@ -26,7 +26,7 @@ $contenu = new contenu();
 </header>
 
 <div class="container-sm">
-    <h4>Découvrez nos actions MOPODES</h4>
+    <h4>Mobilisions-nous pour la planète, découvrez nos actions MOPODES</h4>
     <hr>
 </div>
 

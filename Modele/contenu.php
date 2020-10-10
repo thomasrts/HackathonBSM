@@ -21,23 +21,25 @@ public static function getheader(){
                 <li class="nav-item">
                     <div class="dropdown">
 
-                     <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
-                          Accès aux projets
-                     </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="https://ouranet.com">Bac a Marée</a>
-                          <a class="dropdown-item" href="https://ouranet.com">Nettoyage de plages</a>
-                          <a class="dropdown-item" href="https://ouranet.com">OSPAR</a>
-                          <a class="dropdown-item" href="https://ouranet.com">Plastic's origins</a>
-                      </div>
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin:15px;">
+                            Accès aux actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Bac a Marée</a>
+                            <a class="dropdown-item" href="#">Nettoyage de plages</a>
+                            <a class="dropdown-item" href="#">OSPAR</a>
+                            <a class="dropdown-item" href="#">Plastic's origins</a>
+                        </div>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php" style="margin:15px;">Qui sommes-nous</a>
                 </li>
-                <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">S'inscrire à MOPODES</a>
-                <a href="connexion.php" class="btn btn-primary" style="margin: 10px;">Se connecter à MOPODES</a>
             </ul>
+            <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
+            <a href="connexion.php" class="btn btn-primary" style="margin: 10px;">Connexion</a>
+
         </div>
     </nav>
     <?php

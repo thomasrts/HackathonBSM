@@ -29,7 +29,7 @@ $md5mdp = md5($mdp);
 <form style='margin: 15px;' method='post' action="Controller/verif_mdp.php">
     <div class='container'>
         <div class="row" style="margin-bottom: 35px;">
-            <div class="col-md-6" style="border-right: 1px solid #333">
+            <div class="col-md-6" style="margin-left:15px;border-right: 1px solid #333">
                 <h4>Se connecter au projet MOPODES</h4>
                 <div class="form-group">
                     <label style='width: 150px ; margin-bottom:10px;'>Email : <br/><input id="$nom" type='text' required
@@ -43,14 +43,11 @@ $md5mdp = md5($mdp);
                 </div>
                 <button type="submit" name='envoi' style='border-top:25px' class="btn btn-primary">Valider</button>
             </div>
-            <div>
-
-
-            </div>
-            <div class="col-md-5" style="margin-left: 20px;">
-                <h4>Pas encore inscrit au projet MOPODES ?</h4>
-                <a href="inscription.php" class="btn btn-primary" style="margin-top: 145px; margin-right:25px;">S'inscrire
-                    au MOPODES</a>
+            <hr style="margin:25px;">
+            <div style="margin-left: 20px;">
+                <h4>Vous souhaitez rejoindre les actions de MOPODES ?</h4>
+                <a href="inscription.php" class="btn btn-primary" style="margin-top: 10px; margin-right:25px;">Devenez
+                    ambassadeur</a>
             </div>
         </div>
         <?php

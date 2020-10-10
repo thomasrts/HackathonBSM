@@ -29,7 +29,7 @@ $mdp_verif = $_POST['mdp_verif'];
     <div class='container' style="margin-bottom: 25px;">
         <div class='row mb-2'>
         </div>
-        <h2>S'inscrire au projet MOPODES</h2>
+        <h2>Devenez ambassadeur</h2>
         <div class="form-group">
             <label style='width: 150px'>Email : <br/><input id="$nom" type='text' required
                                                             placeholder="example@gmail.com" name='email'></label>
