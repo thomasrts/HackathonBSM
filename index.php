@@ -26,7 +26,7 @@ $contenu = new contenu();
 </header>
 
 <div class="container-sm">
-    <h4>Bienvenue dans l'accueil du projet MOPODES</h4>
+    <h4>Découvrez nos actions MOPODES</h4>
     <hr>
 </div>
 
@@ -49,6 +49,7 @@ $contenu = new contenu();
 </div>
 <div class="row" style="margin-left:250px;">
     <?php
+    //Monitoring des actions
     $contenu->getCard("img/Nuage.jpg","Nuage","Ce sont des nuages","/Modele/Graphiques/nuage.php");
     $contenu->getCard("img/Graphique%20compartimentable.jpg", "Graphique compartimentable", "GRAPH ME PARLE PAS BENJAMIN ALED", "/Modele/Graphiques/compartiments.php");
     $contenu->getCard("img/Tableau.jpg", "Tableau", "Ceci est un tableau ", "/Modele/Graphiques/tableau.php");

@@ -45,37 +45,37 @@ $mdp_verif = $_POST['mdp_verif'];
         <button type="submit" name='envoi' style='border-top:25px; margin-top: 25px ;' class="btn btn-primary">Valider
         </button>
     </div>
-    <?php
-    if (isset($_POST['envoi'])) {
-        if (!empty($email) && !empty($mdp)) {
-            if ($functions->verif_email($email)) {
+
+</form>
+<?php
+if (isset($_POST['envoi'])) {
+    if (!empty($email) && !empty($mdp)) {
+        if ($functions->verif_email($email)) {
+            echo "<script language='JavaScript'>";
+            echo 'alert("Adresse E-Mail déjà utilisée")';
+            echo "</script>";
+        } else {
+            if ($mdp != $mdp_verif) {
                 echo "<script language='JavaScript'>";
-                echo 'alert("Adresse E-Mail déjà utilisée")';
+                echo 'alert("Les mots de passe ne correspondent pas, veuillez réessayer")';
                 echo "</script>";
+                exit;
             } else {
-                if ($mdp != $mdp_verif) {
-                    echo "<script language='JavaScript'>";
-                    echo 'alert("Les mots de passe ne correspondent pas, veuillez réessayer")';
-                    echo "</script>";
-                    exit;
-                } else {
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        try {
-                            $md5mdp = md5($mdp);
-                            $functions->insertuser("$email", "$md5mdp");
-                            $functions->envoyeremail($email);
-                            echo "<h4>Un mail de bienvenue vous a été envoyé à l'adresse e-mail renseignée ci-dessus</h4>";
-                        } catch (mysqli_sql_exception $exception) {
-                            echo "$exception";
-                        }
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    try {
+                        $md5mdp = md5($mdp);
+                        $functions->insertuser('$email', '$md5mdp');
+                        $functions->envoyeremail($email);
+                        echo "<h4>Un mail de bienvenue vous a été envoyé à l'adresse e-mail renseignée ci-dessus</h4>";
+                    } catch (mysqli_sql_exception $exception) {
+                        echo "$exception";
                     }
                 }
             }
         }
     }
-    ?>
-</form>
-
+}
+?>
 <?php
 $contenu->getfooter();
 ?>

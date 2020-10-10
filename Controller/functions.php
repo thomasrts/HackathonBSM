@@ -6,7 +6,7 @@ class functions
     function verif_mdp($email)
     {
         $sql_connexion = mysqli_connect("51.83.42.191", "Thomas", "#*ThomasR62", "hackathon");
-        $sql_verif = "";
+        $sql_verif = "SELECT md5_pass_user from users where login_user = '$email'";
         $envoi_query = mysqli_query($sql_connexion, $sql_verif);
         $donnees = mysqli_fetch_array($envoi_query);
         mysqli_close($sql_connexion);
@@ -31,9 +31,20 @@ class functions
     function insertuser($user, $pass)
     {
         $sql_connexion = mysqli_connect("51.83.42.191", "hackathon", "hackathon", "hackathon");
-        $mysql_query = "INSERT INTO users (login_user, md5_pass_user, nvau_type_acces) VALUES ($user,$pass,1)";
+        $mysql_query = "INSERT INTO users (login_user, md5_pass_user, nvau_type_acces) VALUES ('$user','$pass',1)";
         $sql_connexion->query($mysql_query);
         $sql_connexion->close();
+    }
+
+    function getid($email)
+    {
+        $sql_connexion = mysqli_connect("51.83.42.191", "hackathon", "hackathon", "hackathon");
+        $sql_verif = "SELECT Id_user as ID FROM users WHERE login_user = '$email'";
+        $envoi_query = mysqli_query($sql_connexion, $sql_verif);
+        $donnees = mysqli_fetch_array($envoi_query);
+        mysqli_close($sql_connexion);
+        return $donnees["ID"];
+
     }
 
     function envoyeremail($email)

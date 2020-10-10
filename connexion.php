@@ -58,7 +58,6 @@ $md5mdp = md5($mdp);
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $md5_verif = $functions->verif_mdp($email);
                 if ($md5mdp == $md5_verif) {
-                    setcookie('connection', $email, -1);
                     $id = $functions->getid($email);
                 } else {
                     if (isset($_COOKIE['connection'])) {
