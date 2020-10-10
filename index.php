@@ -21,39 +21,24 @@ $caroussel = new carousel();
 </head>
 
 <header><?php $header->getheader()?></header>
-
+<?php
+require_once "Modele/card.php";
+$card = new card();
+?>
 <div class="row">
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="col col-12  card card-body">
-                <img class="card-img img-graph" src="img/Courbes.jpg">
-                <h2 class="card-title ">Courbes</h2>
-                <p class="card-text">Ce sont des courbes</p>
-                <a href="#" class="btn btn-primary">Plus d'informations</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-         <div class="col col-12 card card-body">
-            <img class="card-img img-graph" src="img/Diagramme%20circulaire.jpg">
-            <h2 class="card-title">Diagrammme circulaire</h2>
-            <p class="card-text">C'est un diag circulaire</p>
-            <a href="#" class="btn btn-primary">Plus d'informations</a>
-        </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <div class="col col-12 card card-body">
-                <img class="card-img img-graph" src="img/Diagramme%20en%20batons.jpg">
-                <h2 class="card-title">Diagrammme batons</h2>
-                <p class="card-text">C'est un diag en baton</p>
-                <a href="#" class="btn btn-primary">Plus d'informations</a>
-            </div>
-        </div>
-    </div>
+    <?php
+    $card->card("img/Courbes.jpg","Courbes","Ce sont des courbes","https://google.com");
+    $card->card("img/Diagramme%20circulaire.jpg","Diagrammme circulaire","C'est un diag circulaire","https://google.com");
+    $card->card("img/Diagramme%20en%20batons.jpg","Diagramme en batons","C'est un diag en batons","https://google.com");
+    ?>
 </div>
+<div class="row">
+    <?php
+    $card->card("img/Nuage.jpg","Nuage","Ce sont des nuages","https://google.com");
+    $card->card("img/Graphique%20compartimentable.jpg","Graphique compartimentable","GRAPH ME PARLE PAS BENJAMIN ALED","https://google.com");
+    ?>
+</div>
+
 
 <?php $caroussel->carrousel("img/Courbes.jpg", "img/Diagramme circulaire.jpg", "img/Diagramme en batons.jpg");?>
 
