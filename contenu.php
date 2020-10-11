@@ -257,7 +257,7 @@ public static function getheader($linkImg){
                     legend: {
                         labels: {
                             // This more specific font property overrides the global property
-                            fontSize: 30
+                            fontSize: 15
                         }
                     }
 
