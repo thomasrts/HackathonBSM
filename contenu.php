@@ -212,9 +212,9 @@ public static function getheader($linkImg){
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
         <?php
-        require_once "Controller/RequetesSQL.php";
+        require_once "afficher.php";
 
-        $bd = new RequetesSQL();
+        $bd = new afficher();
         $bd->GetDonnees();
         ?>
         <script>
