@@ -26,10 +26,10 @@ public static function getheader($linkImg){
                             Accès aux actions
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Bac a Marée</a>
-                            <a class="dropdown-item" href="#">Nettoyage de plages</a>
-                            <a class="dropdown-item" href="#">OSPAR</a>
-                            <a class="dropdown-item" href="#">Plastic's origins</a>
+                            <a class="dropdown-item" href="bacamaree.php">Bac a Marée</a>
+                            <a class="dropdown-item" href="nettoyagedeplages.php">Nettoyage de plages</a>
+                            <a class="dropdown-item" href="ospar.php">OSPAR</a>
+                            <a class="dropdown-item" href="plasticsorigins.php">Plastic's origins</a>
                         </div>
                     </div>
                 </li>
@@ -38,7 +38,7 @@ public static function getheader($linkImg){
                 </li>
             </ul>
             <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
-            <a href="connexion.php" class="btn btn-primary" style="margin: 10px;">Connexion</a>
+            <a href="connexion.php" class="btn btn-primary" style="margin: 1px;">Connexion</a>
 
         </div>
     </nav>
