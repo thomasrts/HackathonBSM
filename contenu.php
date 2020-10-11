@@ -7,7 +7,7 @@ public static function getheader($linkImg){
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
         <img src='<?php echo $linkImg ?>' width="8%" height="8%" style="margin-left: 25px;">
-        <a class="navbar-brand" href="../index.php"
+        <a class="navbar-brand" href="index.php"
            style="margin-left:20px;padding-left:25px; padding-right:25px; border-left:1px solid #333; border-right: 1px solid #333;">MOPODES</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@ public static function getheader($linkImg){
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link active" href="../index.php" style="margin:15px;">Données en brut </a>
+                    <a class="nav-link active" href="index.php" style="margin:15px;">Données en brut </a>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
@@ -34,7 +34,7 @@ public static function getheader($linkImg){
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.php" style="margin:15px;">Qui sommes-nous</a>
+                    <a class="nav-link" href="index.php" style="margin:15px;">Qui sommes-nous</a>
                 </li>
             </ul>
             <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
@@ -64,7 +64,7 @@ public static function getheader($linkImg){
     public function getCardintopage($image, $nom, $link)
     {
         ?>
-        <div class="col-sm-4" style="margin:20px; color:">
+        <div class="col-sm-3" style="margin:20px; color:">
             <div class="card">
                 <div class="col col-12 card card-body">
                     <img class="card-img img-graph" src="<?php echo $image ?>">
@@ -123,34 +123,35 @@ public static function getheader($linkImg){
 
     public static function getfooter(){
         ?>
-            <div class="container">
-                <hr>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <h6>A propos de nous</h6>
-                        <p class="text-justify">MOPODES</i></p>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <h6>Accès rapide</h6>
-                        <ul class="footer-links">
-                            <li><a href="../connexion.php">Se connecter a son espace personnel</a></li>
-                            <li><a href="../inscription.php"></a></li>
-                            <li><a href="#">Accéder au calendrier des activités</a></li>
-                            <li><a href="../nos-services.php">Nos services administratifs</a></li>
-                        </ul>
-                    </div>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>A propos de nous</h6>
+                    <p class="text-justify">MOPODES</i></p>
                 </div>
-                <hr>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-sm-6 col-xs-12">
-                        <p class="copyright-text">Copyrights &copy; 2020 Tous droits réservés
-                            <a href="https://ouranet.com">OURANET</a>. <a href="../mentions-legales.php">Nos mentions légales</a>
-                        </p>
-                    </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Accès rapide</h6>
+                    <ul class="footer-links">
+                        <li><a href="connexion.php">Se connecter a son espace personnel</a></li>
+                        <li><a href="inscription.php"></a></li>
+                        <li><a href="#">Accéder au calendrier des activités</a></li>
+                        <li><a href="../nos-services.php">Nos services administratifs</a></li>
+                    </ul>
                 </div>
             </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyrights &copy; 2020 Tous droits réservés
+                        <a href="https://ouranet.com">OURANET</a>. <a href="mentions-legales.php">Nos mentions
+                            légales</a>
+                    </p>
+                </div>
+            </div>
+        </div>
         <?php
     }
 
@@ -164,7 +165,7 @@ public static function getheader($linkImg){
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $titre1?></h5>
                         <p class="card-text"><?php echo $desc1?></p>
-                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                        <a href="bacamaree.php" class="btn btn-primary">Accéder à la plateforme</a>
                     </div>
                 </div>
                 <div class="card" style="width: 30rem;margin-right:7%;margin-left:5%;">
@@ -172,7 +173,7 @@ public static function getheader($linkImg){
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $titre2?></h5>
                         <p class="card-text"><?php echo $desc2?></p>
-                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                        <a href="nettoyagedeplages.php" class="btn btn-primary">Accéder à la plateforme</a>
                     </div>
                 </div>
             </div>
@@ -183,7 +184,7 @@ public static function getheader($linkImg){
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $titre3?></h5>
                         <p class="card-text"><?php echo $desc3?></p>
-                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                        <a href="ospar.php" class="btn btn-primary">Accéder à la plateforme</a>
                     </div>
                 </div>
                 <div class="card" style="width: 30rem;margin-right:7%;margin-left:5%;">
@@ -191,7 +192,7 @@ public static function getheader($linkImg){
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $titre4?></h5>
                         <p class="card-text"><?php echo $desc4?></p>
-                        <a href="#" class="btn btn-primary">Accéder à la plateforme</a>
+                        <a href="plasticsorigins.php" class="btn btn-primary">Accéder à la plateforme</a>
                     </div>
                 </div>
             </div>

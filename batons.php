@@ -10,12 +10,12 @@ $contenu = new contenu();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/contenu.css">
-    <link rel="stylesheet" href="../css/Chart.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/contenu.css">
+    <link rel="stylesheet" href="css/Chart.css">
 
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/Chart.bundle.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/Chart.bundle.js"></script>
 
     <title>MOPODES</title>
 
@@ -26,7 +26,7 @@ $contenu = new contenu();
 </header>
 <body>
 
-<?php $contenu->getCardGraphCourbes(); ?>
+<?php $contenu->getCardGraphBatons(); ?>
 
 </body>
 <footer>
