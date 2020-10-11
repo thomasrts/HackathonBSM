@@ -278,7 +278,7 @@ public static function getheader($linkImg){
 
         <?php require_once "Controller/RequetesSQL.php";
 
-        $bd = new RequetesSQL();
+        $bd = new afficher();
         $bd->GetDonnees();
         ?>
         <script>
@@ -348,7 +348,7 @@ public static function getheader($linkImg){
 
         <?php require_once "Controller/RequetesSQL.php";
 
-        $bd = new RequetesSQL();
+        $bd = new afficher();
         $bd->GetDonnees();
         ?>
         <script>
@@ -418,10 +418,10 @@ public static function getheader($linkImg){
     public function getCardGraphCirculaire()
     {
         ?>
-        <div class="col-sm-9" style="margin-left: 200px; color:">
+        <div class="col-sm-11">
             <div class="card">
-                <div class="col col-12 card card-body">
-                    <div style="margin-left: 100px">
+                <div class="col card card-body">
+                    <div style="">
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
                 </div>
@@ -434,7 +434,7 @@ public static function getheader($linkImg){
         ?>
         <div class="col-sm-9" style="margin-left: 200px; color:">
             <div class="card">
-                <div class="col col-12 card card-body">
+                <div class="col col-9 card card-body">
                     <div style="margin-left: 100px">
                         <?php $this->getGraphBatons(); ?>
                     </div>
@@ -446,10 +446,10 @@ public static function getheader($linkImg){
     public function getCardGraphCourbes()
     {
         ?>
-        <div class="col-sm-9" style="margin-left: 200px; color:">
+        <div class="col-sm-11" style="margin-left: 200px; color:">
             <div class="card">
-                <div class="col col-12 card card-body">
-                    <div style="margin-left: 100px">
+                <div class="col col-11 card card-body">
+                    <div>
                         <?php $this->getGraphCourbes(); ?>
                     </div>
                 </div>
