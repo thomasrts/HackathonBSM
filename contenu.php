@@ -3,6 +3,7 @@
 
 class contenu
 {
+
 public static function getheader($linkImg){
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
@@ -414,6 +415,9 @@ public static function getheader($linkImg){
     }
     public function getCardGraphCirculaire()
     {
+        require_once "afficher.php";
+        $af = new afficher();
+        $af->getDonnees();
         ?>
         <div class="col-sm-12">
             <div class="card">
@@ -422,6 +426,7 @@ public static function getheader($linkImg){
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
                     <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Update</div></a>
+                    <p>Total : <?php echo $af->total ?></p>
                 </div>
             </div>
         </div>
