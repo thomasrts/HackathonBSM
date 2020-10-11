@@ -516,7 +516,7 @@ public static function getheader($linkImg){
                         <div class="col-md-4">
                             <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Mettre à jour</div></a>
                         </div>
-                        <div class="col-md-4"><h4 style="margin-top:5px;">Total des déchets : 167</h4></div>
+                        <div class="col-md-4"><h4 style="margin-top:5px;">Total des déchets : 108</h4></div>
                     </div>
 
                 </div>
