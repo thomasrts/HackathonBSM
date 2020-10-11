@@ -48,26 +48,42 @@ public static function getheader($linkImg){
     public function getCard($image, $nom, $desc,$link)
     {
         ?>
-            <div class="col-sm-3" style="margin:20px; color:">
-                <div class="card">
-                    <div class="col col-12 card card-body">
-                        <img class="card-img img-graph" src="<?php echo $image?>">
-                        <h2 class="card-title"><?php  echo $nom?></h2>
-                        <p class="card-text"><?php echo  $desc?></p>
-                        <a href="<?php echo $link?>" class="btn" style="color:#394da6;">Plus d'informations</a>
-                    </div>
+        <div class="col-sm-3" style="margin:20px; color:">
+            <div class="card">
+                <div class="col col-12 card card-body">
+                    <img class="card-img img-graph" src="<?php echo $image ?>">
+                    <h2 class="card-title"><?php echo $nom ?></h2>
+                    <p class="card-text"><?php echo $desc ?></p>
+                    <a href="<?php echo $link ?>" class="btn" style="color:#394da6;">Plus d'informations</a>
                 </div>
             </div>
+        </div>
         <?php
     }
 
-        public function getCarousel($img1, $img2, $img3)
+    public function getCardintopage($image, $nom, $link)
     {
         ?>
-            <div id="carouselExemple" class="carousel slide container" data-ride="carousel" data-interval="3000" style="margin-bottom: 40px;">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExemple" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExemple" data-slide-to="1"></li>
+        <div class="col-sm-4" style="margin:20px; color:">
+            <div class="card">
+                <div class="col col-12 card card-body">
+                    <img class="card-img img-graph" src="<?php echo $image ?>">
+                    <h2 class="card-title"><?php echo $nom ?></h2>
+                    <a href="<?php echo $link ?>" class="btn" style="color:#394da6;">Plus d'informations</a>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    public function getCarousel($img1, $img2, $img3)
+    {
+        ?>
+        <div id="carouselExemple" class="carousel slide container" data-ride="carousel" data-interval="3000"
+             style="margin-bottom: 40px;">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExemple" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExemple" data-slide-to="1"></li>
                     <li data-target="#carouselExemple" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" style="text-align-all: center;">
