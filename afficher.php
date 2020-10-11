@@ -12,7 +12,7 @@ class afficher
     public $nbMetalPourcent = 0;
     public $nbVerreCeramiquePourcent = 0;
     public $nbDiversPourcent = 0;
-
+    public $total = 0;
 
     public function getDonnees()
     {
@@ -117,6 +117,9 @@ class afficher
          $this->nbMetalPourcent = round(($NombreMetal/$Total) * 100,2);
          $this->nbVerreCeramiquePourcent = round(($NombreVerreCeramique/$Total) * 100,2);
          $this->nbDiversPourcent = round(($NombreDivers/$Total) * 100,2);
+         $this->total = $Total;
+
 
     }
+
 }
