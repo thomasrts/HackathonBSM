@@ -418,7 +418,7 @@ public static function getheader($linkImg){
     public function getCardGraphCirculaire()
     {
         ?>
-        <div class="col-sm-11">
+        <div class="col-sm-12">
             <div class="card">
                 <div class="col card card-body">
                     <div style="">

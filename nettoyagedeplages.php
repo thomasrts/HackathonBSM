@@ -23,15 +23,15 @@ $contenu = new contenu();
 <header><?php $contenu->getheader("img/logo-nature-libre.png"); ?></header>
 <div class="container">
     <div class="row">
-        <div class="card">
-            <div class="col card card-body">
+        <div class="card col-md-4">
+            <div class="col card-body">
                 <img class="card-img img-graph" src="img/netoyagedeplages.jpg">
                 <h2 class="card-title">A propos de cette action : </h2>
                 <p>L'action de nettoyages de plages consiste en une journée de mobilisation pour nettoyer nos plages
                     françaises. Elles permettent de récupérer un nombre importants de déchets et de polluants</p>
             </div>
         </div>
-        <div>
+        <div class="col-md-8">
             <?php $contenu->getCardGraphCirculaire() ?>
         </div>
     </div>
