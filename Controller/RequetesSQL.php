@@ -41,4 +41,15 @@ class RequetesSQL
 
     }
 
+    public function GetTypeObjetFake()
+    {
+        $this->Connectbdd();
+        $query = "SELECT * FROM type_dechets_1";
+        $result = mysqli_query($this->sql_connexion, $query);
+
+        if(!$result) die("Erreur à la selection");
+
+        return $result;
+    }
+
 }

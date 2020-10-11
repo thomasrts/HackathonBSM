@@ -264,7 +264,70 @@ public static function getheader($linkImg){
         </script>
         <?php
     }
+    public function getGraphCirculairesFake()
+    {
+        ?>
+        <div class="chart-container">
+            <canvas id="myChart"  height="40vh" width="80vw"></canvas>
+        </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+
+        <?php
+        require_once "afficher.php";
+
+        $bd = new afficher();
+        $bd->GetDonneesFake();
+        ?>
+        <script>
+            ctx = document.getElementById('myChart').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'pie',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Plastique', 'Caoutchouc', 'Textile', 'Papier / Crayon', 'Bois', 'Metal', 'Verre / Ceramique','Divers'],
+                    datasets: [{
+                        label: 'Dataset',
+                        backgroundColor: [
+                            'rgb(117,185,255, 0.8)',
+                            'rgba(39, 44, 232, 0.8)',
+                            'rgba(255, 118, 18, 0.8)',
+                            'rgba(255, 237, 45, 0.8)',
+                            'rgba(255, 10, 0, 0.8)',
+                            'rgba(255, 37, 98, 0.8)',
+                            'rgb(153,102,255, 0.8)',
+                            'rgb(83,184,70, 0.8)',
+                        ],
+                        borderWidth: 3,
+                        data: [
+
+                            <?php echo $bd->nbPlastiquePourcent . ", " . $bd->nbCaoutchoucPourcent . ", " . $bd->nbTextilePourcent . ", " . $bd->nbPapierCrayonPourcent . ", " . $bd->nbBoisPourcent . ", " . $bd->nbMetalPourcent . ", " . $bd->nbVerreCeramiquePourcent . ", " . $bd->nbDiversPourcent?>
+
+                        ]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {
+                    title: {
+                        display: true,
+                        text: 'Répartition des types de déchets en %',
+                        fontSize: 20
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontSize: 15
+                        }
+                    }
+
+                }
+            });
+        </script>
+        <?php
+    }
     public function getGraphBatons()
     {
         ?>
@@ -426,10 +489,34 @@ public static function getheader($linkImg){
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Mettre à jour</div></a>
                         </div>
-                        <div class="col-md-5"><h4 style="margin-top:5px;">Total : <?php echo $af->total ?></h4></div>
+                        <div class="col-md-4"><h4 style="margin-top:5px;">Total des déchets : <?php echo $af->total ?></h4></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    public function getCardGraphCirculaireFake()
+    {
+        require_once "afficher.php";
+        $af = new afficher();
+        $af->getDonnees();
+        ?>
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="col card-body">
+                    <div>
+                        <?php $this->getGraphCirculairesFake(); ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Mettre à jour</div></a>
+                        </div>
+                        <div class="col-md-4"><h4 style="margin-top:5px;">Total des déchets : 167</h4></div>
                     </div>
 
                 </div>

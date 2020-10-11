@@ -31,7 +31,7 @@ $contenu = new contenu();
             </div>
         </div>
         <div class="col-md-8">
-            <?php $contenu->getCardGraphCirculaire() ?>
+            <?php $contenu->getCardGraphCirculaireFake() ?>
         </div>
         <div class="row">
             <h3>Carte interactive</h3>
