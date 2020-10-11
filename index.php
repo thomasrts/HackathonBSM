@@ -1,5 +1,5 @@
 <?php
-require_once "Modele/contenu.php";
+require_once "contenu.php";
 $contenu = new contenu();
 ?>
 

@@ -212,7 +212,7 @@ public static function getheader($linkImg){
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
         <?php
-        require_once "../Controller/RequetesSQL.php";
+        require_once "Controller/RequetesSQL.php";
 
         $bd = new RequetesSQL();
         $bd->GetDonnees();
@@ -276,7 +276,7 @@ public static function getheader($linkImg){
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-        <?php require_once "../Controller/RequetesSQL.php";
+        <?php require_once "Controller/RequetesSQL.php";
 
         $bd = new RequetesSQL();
         $bd->GetDonnees();
@@ -346,7 +346,7 @@ public static function getheader($linkImg){
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-        <?php require_once "../Controller/RequetesSQL.php";
+        <?php require_once "Controller/RequetesSQL.php";
 
         $bd = new RequetesSQL();
         $bd->GetDonnees();
