@@ -30,8 +30,14 @@ $contenu = new contenu();
                     françaises. Elles permettent de récupérer un nombre importants de déchets et de polluants</p>
             </div>
         </div>
-        <div class="col-md-8" style="padding-top: 20px">
+        <div class="col-md-8" style="padding-top: 5px" >
             <?php $contenu->getCardGraphCirculaire(); ?>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Carte interactive</h3>
+        <div class="card">
+            <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/test-integration_509181?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="full-map.php">See full screen</a></p>
         </div>
     </div>
 </div>

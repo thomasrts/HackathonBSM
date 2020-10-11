@@ -136,7 +136,6 @@ public static function getheader($linkImg){
                         <li><a href="connexion.php">Se connecter a son espace personnel</a></li>
                         <li><a href="inscription.php"></a></li>
                         <li><a href="#">Accéder au calendrier des activités</a></li>
-                        <li><a href="../nos-services.php">Nos services administratifs</a></li>
                     </ul>
                 </div>
             </div>
@@ -145,9 +144,7 @@ public static function getheader($linkImg){
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyrights &copy; 2020 Tous droits réservés
-                        <a href="https://ouranet.com">OURANET</a>. <a href="mentions-legales.php">Nos mentions
-                            légales</a>
+                    <p class="copyright-text">Copyrights &copy; 2020 Tous droits réservés, Bhynnères.
                     </p>
                 </div>
             </div>
@@ -205,7 +202,7 @@ public static function getheader($linkImg){
     public function getGraphCirculaires()
     {
         ?>
-        <div class="chart-container" style="margin-left: 50% height:600px; width:1200px">
+        <div class="chart-container">
             <canvas id="myChart"  height="40vh" width="80vw"></canvas>
         </div>
 
