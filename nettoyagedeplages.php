@@ -1,7 +1,6 @@
 <?php
 require_once "contenu.php";
 $contenu = new contenu();
-
 ?>
 
 <!doctype html>
