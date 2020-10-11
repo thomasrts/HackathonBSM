@@ -31,8 +31,8 @@ $contenu = new contenu();
                     françaises. Elles permettent de récupérer un nombre importants de déchets et de polluants</p>
             </div>
         </div>
-        <div class="col-md-8">
-            <?php $contenu->getCardGraphCirculaire() ?>
+        <div class="col-md-8" style="padding-top: 20px">
+            <?php $contenu->getCardGraphCirculaire(); ?>
         </div>
     </div>
 </div>
