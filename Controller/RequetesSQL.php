@@ -43,7 +43,7 @@ class RequetesSQL
 
     public function getDonnees()
     {
-        require_once "../Controller/RequetesSQL.php";
+        require_once "Controller/RequetesSQL.php";
 
         $bdd = new RequetesSQL();
 
