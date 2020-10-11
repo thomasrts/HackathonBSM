@@ -420,10 +420,11 @@ public static function getheader($linkImg){
         ?>
         <div class="col-sm-12">
             <div class="card">
-                <div class="col card card-body">
-                    <div style="">
+                <div class="col card-body">
+                    <div>
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
+                    <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Update</div></a>
                 </div>
             </div>
         </div>
