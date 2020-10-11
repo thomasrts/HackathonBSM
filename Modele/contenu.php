@@ -7,7 +7,7 @@ public static function getheader($linkImg){
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
         <img src='<?php echo $linkImg ?>' width="8%" height="8%" style="margin-left: 25px;">
-        <a class="navbar-brand" href="index.php"
+        <a class="navbar-brand" href="../index.php"
            style="margin-left:20px;padding-left:25px; padding-right:25px; border-left:1px solid #333; border-right: 1px solid #333;">MOPODES</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -228,12 +228,12 @@ public static function getheader($linkImg){
                     datasets: [{
                         label: 'Dataset',
                         backgroundColor: [
-                            'rgba(255, 37, 98, 0.8)',
+                            'rgb(117,185,255, 0.8)',
                             'rgba(39, 44, 232, 0.8)',
                             'rgba(255, 118, 18, 0.8)',
                             'rgba(255, 237, 45, 0.8)',
                             'rgba(255, 10, 0, 0.8)',
-                            'rgb(117,185,255, 0.8)',
+                            'rgba(255, 37, 98, 0.8)',
                             'rgb(153,102,255, 0.8)',
                             'rgb(83,184,70, 0.8)',
                         ],
