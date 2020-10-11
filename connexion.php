@@ -1,5 +1,5 @@
 <?php
-require_once "Modele/contenu.php";
+require_once "contenu.php";
 $contenu = new contenu();
 ?>
 
@@ -19,7 +19,7 @@ $contenu = new contenu();
 </head>
 <body>
 <header>
-    <?php $contenu->getheader(); ?>
+    <?php $contenu->getheader("img/logo-nature-libre.png"); ?>
 </header>
 <?php
 $email = $_POST['email'];

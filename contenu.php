@@ -26,10 +26,10 @@ public static function getheader($linkImg){
                             Accès aux actions
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Bac a Marée</a>
-                            <a class="dropdown-item" href="#">Nettoyage de plages</a>
-                            <a class="dropdown-item" href="#">OSPAR</a>
-                            <a class="dropdown-item" href="#">Plastic's origins</a>
+                            <a class="dropdown-item" href="bacamaree.php">Bac a Marée</a>
+                            <a class="dropdown-item" href="nettoyagedeplages.php">Nettoyage de plages</a>
+                            <a class="dropdown-item" href="ospar.php">OSPAR</a>
+                            <a class="dropdown-item" href="plasticsorigins.php">Plastic's origins</a>
                         </div>
                     </div>
                 </li>
@@ -38,7 +38,7 @@ public static function getheader($linkImg){
                 </li>
             </ul>
             <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
-            <a href="connexion.php" class="btn btn-primary" style="margin: 10px;">Connexion</a>
+            <a href="connexion.php" class="btn btn-primary" style="margin: 1px;">Connexion</a>
 
         </div>
     </nav>
@@ -205,7 +205,7 @@ public static function getheader($linkImg){
     public function getGraphCirculaires()
     {
         ?>
-        <div class="chart-container" style="position: relative;">
+        <div class="chart-container" style="margin-left: 50% height:600px; width:1200px">
             <canvas id="myChart"  height="40vh" width="80vw"></canvas>
         </div>
 
@@ -257,9 +257,7 @@ public static function getheader($linkImg){
                     legend: {
                         labels: {
                             // This more specific font property overrides the global property
-                            fontSize: 20,
-                            fullWidth : false,
-                            position: 'bottom'
+                            fontSize: 15
                         }
                     }
 
@@ -272,13 +270,13 @@ public static function getheader($linkImg){
     public function getGraphBatons()
     {
         ?>
-        <div class="chart-container" style="position: relative;">
+        <div class="chart-container" style=" height:600px; width:1200px">
             <canvas id="myChart" height="40vh" width="80vw"></canvas>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
 
-        <?php require_once "afficher.php";
+        <?php require_once "Controller/RequetesSQL.php";
 
         $bd = new afficher();
         $bd->GetDonnees();
@@ -342,7 +340,7 @@ public static function getheader($linkImg){
     public function getGraphCourbes()
     {
         ?>
-        <div class="chart-container" style="position: relative;  height:600px; width:1200px">
+        <div class="chart-container" style=" height:600px; width:1200px">
             <canvas id="myChart" height="40vh" width="80vw"></canvas>
         </div>
 
@@ -423,7 +421,7 @@ public static function getheader($linkImg){
         <div class="col-sm-12">
             <div class="card">
                 <div class="col card card-body">
-                    <div>
+                    <div style="">
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
                 </div>
@@ -434,10 +432,10 @@ public static function getheader($linkImg){
     public function getCardGraphBatons()
     {
         ?>
-        <div class="col-sm-12">
+        <div class="col-sm-9" style="margin-left: 200px; color:">
             <div class="card">
-                <div class="col card card-body">
-                    <div>
+                <div class="col col-9 card card-body">
+                    <div style="margin-left: 100px">
                         <?php $this->getGraphBatons(); ?>
                     </div>
                 </div>
