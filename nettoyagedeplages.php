@@ -37,7 +37,7 @@ $contenu = new contenu();
     <div class="row">
         <h3>Carte interactive</h3>
         <div class="card">
-            <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/test-integration_509181?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe><p><a href="full-map.php">See full screen</a></p>
+            <iframe style="margin-top:15px; margin-bottom: 15px;"width="100%" height="600px" frameborder="0" allowfullscreen src="//umap.openstreetmap.fr/en/map/test-integration_509181?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false"></iframe>
         </div>
     </div>
 </div>

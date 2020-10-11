@@ -425,8 +425,13 @@ public static function getheader($linkImg){
                     <div>
                         <?php $this->getGraphCirculaires(); ?>
                     </div>
-                    <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Update</div></a>
-                    <p>Total : <?php echo $af->total ?></p>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <a href="nettoyagedeplages1.php"><div class="btn btn-primary">Mettre à jour</div></a>
+                        </div>
+                        <div class="col-md-5"><h4 style="margin-top:5px;">Total : <?php echo $af->total ?></h4></div>
+                    </div>
+
                 </div>
             </div>
         </div>
