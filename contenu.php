@@ -6,6 +6,8 @@ class contenu
 
 public static function getheader($linkImg){
     ?>
+        <script src="js/contenu.js"></script>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 25px;">
         <img src='<?php echo $linkImg ?>' width="8%" height="8%" style="margin-left: 25px;">
         <a class="navbar-brand" href="index.php"
@@ -38,6 +40,18 @@ public static function getheader($linkImg){
                     <a class="nav-link" href="index.php" style="margin:15px;">Qui sommes-nous</a>
                 </li>
             </ul>
+            <div class="js">
+                <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle">
+                    <form action="" class="language-picker__form">
+                        <label for="language-picker-select">Select your language</label>
+                        <select name="language-picker-select" id="language-picker-select">
+                            <option lang="en" value="english" >English</option>
+                            <option lang="fr" value="francais" selected>Français</option>
+                            <option lang="es" value="italiano">Spanish</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
             <a href="inscription.php" class="btn btn-primary" style="margin: 10px;">Rejoignez-nous</a>
             <a href="connexion.php" class="btn btn-primary" style="margin: 1px;">Connexion</a>
 
